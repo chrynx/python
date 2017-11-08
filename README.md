@@ -9,3 +9,5 @@ This is the first project that I am going to build.
 3 - Added an if statement that checks whether the user input matches the die roll. If it does, the user gets a prompting stating well done, otherwise, they get a prompt stating better luck next time.
 4 - I have added some error checks now (just in case some users try to be smart and not follow the simple instruction). If the user inputs something below 1, above 6, or a letter, they will get an error and will be continued to be asked for the right number.
 
+Second project - Tambay ( A filipino word for the phrase hang out )
+1 - Started by having a simple Q and A with the user. just asking where the user wants to hang out. The reseponse would be an answer saying, I wanna hang out at that place
