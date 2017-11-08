@@ -11,3 +11,4 @@ This is the first project that I am going to build.
 
 Second project - Tambay ( A filipino word for the phrase hang out )
 1 - Started by having a simple Q and A with the user. just asking where the user wants to hang out. The reseponse would be an answer saying, I wanna hang out at that place
+2 - did a for loop that allows users to input multiple times. Still need to add some error checks.
