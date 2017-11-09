@@ -7,9 +7,6 @@ for i in range(3):
 #-------------functions------------
 def greeting(name):
  print 'thank you ' + name + ', welcome to the game '
-
-
-
 def play_game(pl1,pl2):
  win_condition = False
  x_turn = True
@@ -18,31 +15,26 @@ def play_game(pl1,pl2):
    print board[i]
   if x_turn == True:
    print 'it is ' + pl1 + '\'s turn '
+   choose_row = int(raw_input('choose a row (0-2) -> '))
+   choose_col = int(raw_input('choose a col (0-2) -> '))
+   while ValueError and choose_row < 0 and choose_row > 2 and choose_col < 0 and choose_col > 2:
+     print 'enter the right value'
+     choose_row = int(raw_input('choose a row (0-2) -> '))
+     choose_col = int(raw_input('choose a col (0-2) -> '))
+   row = board[choose_row]
+   row[choose_col] = 'X'
+   if row[0] == 'X' and row[1] == 'X' and row[2] == 'X':
+    print pl1 + ' has won!'
+    print 'goodbye'
+    quit()
   if x_turn == False:
    print 'it is ' + pl2 + '\'s turn '
-  if x_turn == True:
-   choose_row = 0
-   choose_col = 0
-   def position(choose_row, choose_col):
-    choose_row = int(raw_input('choose a row'))
-    choose_col = int(raw_input('choose a col'))
-   position(choose_row, choose_col)
+   try:
+    choose_row = int(raw_input('choose a row (0-2) -> '))
+    choose_col = int(raw_input('choose a col (0-2) -> '))
+   except ValueError:
+    print 'enter the right value'
    row = board[choose_row]
-   while row[choose_col] != '-':
-    print 'choose a different position - this one\'s taken'
-    position(choose_row, choose_col)
-   row[choose_col] = 'X'
-  if x_turn == False:
-   choose_row = 0
-   choose_col = 0
-   def position(choose_row, choose_col):
-    choose_row = int(raw_input('choose a row'))
-    choose_col = int(raw_input('choose a col'))
-   position(choose_row, choose_col)
-   row = board[choose_row]
-   while row[choose_col] != '-':
-    print 'choose a different position - this one\'s taken'
-    position(choose_row, choose_col)
    row[choose_col] = 'O'
   if x_turn == True:
    x_turn = False
