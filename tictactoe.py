@@ -15,12 +15,18 @@ def play_game(pl1,pl2):
    print board[i]
   if x_turn == True:
    print 'it is ' + pl1 + '\'s turn '
-   choose_row = int(raw_input('choose a row (0-2) -> '))
-   choose_col = int(raw_input('choose a col (0-2) -> '))
-   while ValueError and choose_row < 0 and choose_row > 2 and choose_col < 0 and choose_col > 2:
-     print 'enter the right value'
-     choose_row = int(raw_input('choose a row (0-2) -> '))
-     choose_col = int(raw_input('choose a col (0-2) -> '))
+   position = False
+   while position == False:
+     try:
+      choose_row = int(raw_input('choose a row (0-2) -> '))
+      while choose_row > 2 or choose_row < 0:
+       choose_row = int(raw_input('choose a row (0-2) -> '))
+      choose_col = int(raw_input('choose a col (0-2) -> '))
+      while choose_col > 2 or choose_col < 0:
+       choose_col = int(raw_input('choose a col(0-2) -> '))
+      position = True
+     except ValueError:
+      print 'please only input numbers'
    row = board[choose_row]
    row[choose_col] = 'X'
    if row[0] == 'X' and row[1] == 'X' and row[2] == 'X':
