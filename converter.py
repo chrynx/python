@@ -2,7 +2,12 @@ print '--------------------------------------------------'
 print 'Python Converter Program'
 print '--------------------------------------------------'
 print 'Thank you for choosing this program'
-
+user = raw_input('What is your name? -> ')
+print '--------------------------------------------------'
+print '--------------------------------------------------'
+print 'Welcome, ' + user
+print '--------------------------------------------------'
+print '--------------------------------------------------'
 def exit_prompt():
  again = raw_input('Is that all for today? (y/n)')
  while again != 'y' and again != 'n':
@@ -45,7 +50,7 @@ def convert():
    print 'This is the amount in INCHES -> ' + str(FT * 12)
   if base == 2:
    INCHES = int(raw_input('Amount in INCHES -> '))
-  print 'This is the amount in FT -> ' + str(INCHES / 12)
+   print 'This is the amount in FT -> ' + str(INCHES / 12)
  
  if convert_choice == 2:
   print 'Which way are we going today? '
@@ -54,9 +59,9 @@ def convert():
   base = int(raw_input('Please choose the number of your choice -> '))
   if base == 1:
    KMS = int(raw_input('Amount in KMS -> '))
-   print 'This is the amount in MILES -> ' + str(KMS * 1.6)
+   print 'This is the amount in MILES -> ' + str(KMS / 1.6)
   if base == 2:
    MILES = int(raw_input('Amount in MILES -> '))
-   print 'This is the amount in KMS -> ' + str(MILES / 1.6)
+   print 'This is the amount in KMS -> ' + str(MILES * 1.6)
  exit_prompt()
 convert()

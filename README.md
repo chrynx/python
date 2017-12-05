@@ -37,3 +37,8 @@ Loan_Calculator
 - Takes in three inputs, the amount, how many months it should be repaid, and the interest rate at which the contraact is agreed upon.
 - These inputs are then fed into the function which calculates the total monthly payment.
 - The input prompts also includes confirmation prompts to ensure that the right amount is inputted.
+
+Converter
+
+- Simple process, goes through a list of different conversions that the user might want to choose
+- Checks which way the user wants to convert, then applies the correct formula
