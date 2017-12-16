@@ -14,4 +14,5 @@ for i in range(0,8):
     white_pawn[i] = 'P'
     black_pawn[i] = 'P'
 
+
 print_board()
